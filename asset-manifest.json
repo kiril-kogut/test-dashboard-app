@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.b201a0ad.chunk.css",
-    "main.js": "/static/js/main.0db4d119.chunk.js",
-    "main.js.map": "/static/js/main.0db4d119.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2018bc20.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2018bc20.js.map",
-    "static/js/2.332d57b8.chunk.js": "/static/js/2.332d57b8.chunk.js",
-    "static/js/2.332d57b8.chunk.js.map": "/static/js/2.332d57b8.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.784741d5b7d48f0817d8f498996240d1.js": "/precache-manifest.784741d5b7d48f0817d8f498996240d1.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b201a0ad.chunk.css.map": "/static/css/main.b201a0ad.chunk.css.map",
-    "static/js/2.332d57b8.chunk.js.LICENSE.txt": "/static/js/2.332d57b8.chunk.js.LICENSE.txt",
-    "static/media/icon_avatar_default.969001b7.svg": "/static/media/icon_avatar_default.969001b7.svg",
-    "static/media/icon_calendar.4dae59c9.svg": "/static/media/icon_calendar.4dae59c9.svg",
-    "static/media/icon_dashboard.06a24e19.svg": "/static/media/icon_dashboard.06a24e19.svg",
-    "static/media/icon_order.02e5bfa1.svg": "/static/media/icon_order.02e5bfa1.svg",
-    "static/media/icon_products.77a5434f.svg": "/static/media/icon_products.77a5434f.svg"
+    "main.css": "/test-dashboard-app/static/css/main.b201a0ad.chunk.css",
+    "main.js": "/test-dashboard-app/static/js/main.3dcc8772.chunk.js",
+    "main.js.map": "/test-dashboard-app/static/js/main.3dcc8772.chunk.js.map",
+    "runtime-main.js": "/test-dashboard-app/static/js/runtime-main.24d9cc16.js",
+    "runtime-main.js.map": "/test-dashboard-app/static/js/runtime-main.24d9cc16.js.map",
+    "static/js/2.332d57b8.chunk.js": "/test-dashboard-app/static/js/2.332d57b8.chunk.js",
+    "static/js/2.332d57b8.chunk.js.map": "/test-dashboard-app/static/js/2.332d57b8.chunk.js.map",
+    "index.html": "/test-dashboard-app/index.html",
+    "precache-manifest.508f08a145cb1dbb632964cb97848e9c.js": "/test-dashboard-app/precache-manifest.508f08a145cb1dbb632964cb97848e9c.js",
+    "service-worker.js": "/test-dashboard-app/service-worker.js",
+    "static/css/main.b201a0ad.chunk.css.map": "/test-dashboard-app/static/css/main.b201a0ad.chunk.css.map",
+    "static/js/2.332d57b8.chunk.js.LICENSE.txt": "/test-dashboard-app/static/js/2.332d57b8.chunk.js.LICENSE.txt",
+    "static/media/icon_avatar_default.969001b7.svg": "/test-dashboard-app/static/media/icon_avatar_default.969001b7.svg",
+    "static/media/icon_calendar.4dae59c9.svg": "/test-dashboard-app/static/media/icon_calendar.4dae59c9.svg",
+    "static/media/icon_dashboard.06a24e19.svg": "/test-dashboard-app/static/media/icon_dashboard.06a24e19.svg",
+    "static/media/icon_order.02e5bfa1.svg": "/test-dashboard-app/static/media/icon_order.02e5bfa1.svg",
+    "static/media/icon_products.77a5434f.svg": "/test-dashboard-app/static/media/icon_products.77a5434f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2018bc20.js",
+    "static/js/runtime-main.24d9cc16.js",
     "static/js/2.332d57b8.chunk.js",
     "static/css/main.b201a0ad.chunk.css",
-    "static/js/main.0db4d119.chunk.js"
+    "static/js/main.3dcc8772.chunk.js"
   ]
 }
