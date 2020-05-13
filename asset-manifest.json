@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/test-dashboard-app/static/css/main.b201a0ad.chunk.css",
-    "main.js": "/test-dashboard-app/static/js/main.3dcc8772.chunk.js",
-    "main.js.map": "/test-dashboard-app/static/js/main.3dcc8772.chunk.js.map",
+    "main.js": "/test-dashboard-app/static/js/main.409da831.chunk.js",
+    "main.js.map": "/test-dashboard-app/static/js/main.409da831.chunk.js.map",
     "runtime-main.js": "/test-dashboard-app/static/js/runtime-main.24d9cc16.js",
     "runtime-main.js.map": "/test-dashboard-app/static/js/runtime-main.24d9cc16.js.map",
     "static/js/2.332d57b8.chunk.js": "/test-dashboard-app/static/js/2.332d57b8.chunk.js",
     "static/js/2.332d57b8.chunk.js.map": "/test-dashboard-app/static/js/2.332d57b8.chunk.js.map",
     "index.html": "/test-dashboard-app/index.html",
-    "precache-manifest.508f08a145cb1dbb632964cb97848e9c.js": "/test-dashboard-app/precache-manifest.508f08a145cb1dbb632964cb97848e9c.js",
+    "precache-manifest.a2d6005c190c23f5ef703e5c69bbf91e.js": "/test-dashboard-app/precache-manifest.a2d6005c190c23f5ef703e5c69bbf91e.js",
     "service-worker.js": "/test-dashboard-app/service-worker.js",
     "static/css/main.b201a0ad.chunk.css.map": "/test-dashboard-app/static/css/main.b201a0ad.chunk.css.map",
     "static/js/2.332d57b8.chunk.js.LICENSE.txt": "/test-dashboard-app/static/js/2.332d57b8.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.24d9cc16.js",
     "static/js/2.332d57b8.chunk.js",
     "static/css/main.b201a0ad.chunk.css",
-    "static/js/main.3dcc8772.chunk.js"
+    "static/js/main.409da831.chunk.js"
   ]
 }
