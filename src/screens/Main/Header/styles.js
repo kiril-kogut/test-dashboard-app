@@ -1,13 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   container: {
     height: '70px',
+    minHeight: '70px',
     display: 'flex',
     alignItems: 'center',
     boxShadow: '0 2px 6px rgba(0, 0, 0, 0.04)',
     padding: '0 34px',
     justifyContent: 'space-between',
+    backgroundColor: theme.header.background,
   },
   contentContainer: {
     display: 'flex',
@@ -15,9 +17,9 @@ const styles = makeStyles({
   },
   storyName: {
     fontSize: '18px',
-    fontFamily: 'Poppins',
+    fontFamily: theme.fontFamily,
     fontWeight: 500,
-    color: '#555555',
+    color: theme.header.storyColor,
     marginLeft: '9px',
   },
   storyNameCircle: {
@@ -43,6 +45,6 @@ const styles = makeStyles({
   avatar: {
     marginLeft: '11px',
   },
-});
+}));
 
 export default styles;

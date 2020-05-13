@@ -29,8 +29,7 @@ const Dropdown = ({ title, children }) => {
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
+        onClose={handleClose}>
         {children}
       </Menu>
     </div>
@@ -39,10 +38,15 @@ const Dropdown = ({ title, children }) => {
 
 Dropdown.propTypes = {
   title: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 };
 
 Dropdown.defaultProps = {
   title: '',
+  children: '',
 };
 
 export default Dropdown;

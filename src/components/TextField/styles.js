@@ -1,23 +1,19 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   input: {
     display: 'flex',
     width: '100%',
-    color: 'green',
-    fontFamily: 'Poppins',
-    fontSize: '15px',
 
     '& input, .MuiFormLabel-root': {
-      color: '#43425d',
-      fontFamily: 'Poppins',
+      color: theme.input.color,
+      fontFamily: theme.fontFamily,
       fontSize: '15px',
     },
     '& .MuiInput-underline:before': {
-      borderColor: '#e9e9f0'
-    }
-
+      borderColor: theme.input.borderColor,
+    },
   },
-});
+}));
 
 export default styles;

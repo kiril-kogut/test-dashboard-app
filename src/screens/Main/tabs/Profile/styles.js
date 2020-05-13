@@ -1,15 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   container: {
     marginTop: '25px',
     marginLeft: '35px',
     marginRight: '35px',
   },
   profileTitle: {
-    fontFamily: 'Poppins',
+    fontFamily: theme.fontFamily,
     fontWeight: '400',
-    color: '#233143',
+    color: theme.profileTab.titleColor,
     fontSize: '26px',
     lineHeight: '40px',
   },
@@ -37,7 +37,7 @@ const styles = makeStyles({
   buttonRoot: {
     borderRadius: '30px',
     fontSize: '13px',
-    fontFamily: 'Poppins',
+    fontFamily: theme.fontFamily,
     fontWeight: '600',
     textTransform: 'none',
     width: '128px',
@@ -45,35 +45,18 @@ const styles = makeStyles({
     boxShadow: 'none',
   },
   buttonEdit: {
-    backgroundColor: '#edf1f4',
-    color: '#808f9a',
+    backgroundColor: theme.profileTab.editButtonBackground,
+    color: theme.profileTab.editButtonColor,
   },
   buttonUpload: {
-    backgroundColor: '#5fa01b',
-    color: 'white',
+    backgroundColor: theme.profileTab.uploadButtonBackground,
+    color: theme.profileTab.uploadButtonColor,
   },
   buttonSave: {
     width: 'auto',
-    backgroundColor: '#5fa01b',
-    color: 'white',
+    backgroundColor: theme.profileTab.saveButtonBackground,
+    color: theme.profileTab.saveButtonColor,
     padding: '0 20px',
-  },
-  input: {
-    display: 'flex',
-    width: '100%',
-    color: 'green',
-    fontFamily: 'Poppins',
-    fontSize: '15px',
-
-    '& input, .MuiFormLabel-root': {
-      color: '#43425d',
-      fontFamily: 'Poppins',
-      fontSize: '15px',
-    },
-    '& .MuiInput-underline:before': {
-      borderColor: '#e9e9f0'
-    }
-
   },
   fullSizeRow: {
     display: 'flex',
@@ -103,6 +86,6 @@ const styles = makeStyles({
     height: '100%',
     borderRadius: '50%',
   },
-});
+}));
 
 export default styles;

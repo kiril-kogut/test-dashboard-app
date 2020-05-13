@@ -1,16 +1,16 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   text: {
-    fontFamily: 'Poppins',
+    fontFamily: theme.fontFamily,
     fontSize: '13px',
     fontWeight: '400',
-    color: '#585858',
+    color: theme.dropdown.color,
     textTransform: 'none',
   },
   icon: {
-    color: '#bcbcbc',
+    color: theme.dropdown.iconColor,
   },
-});
+}));
 
 export default styles;

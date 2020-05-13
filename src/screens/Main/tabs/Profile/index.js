@@ -1,22 +1,40 @@
 import React  from 'react';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Field, reduxForm, formValueSelector } from 'redux-form';
+import isEmpty from 'ramda/src/isEmpty';
+import { Field, reduxForm, formValueSelector, SubmissionError } from 'redux-form';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import useStyles from './styles';
+import { validateForm } from './validation';
 import TextField from '../../../../components/TextField';
 import UploadButton from '../../../../components/UploadButton';
 import DatePicker from '../../../../components/DatePicker';
+import Select from '../../../../components/Select';
 import { ReactComponent as AvatarDefaultIcon } from '../../../../assets/svg/icon_avatar_default.svg';
 
 const formName = 'profile';
 const formSelector = (field) => (state) => formValueSelector(formName)(state, field);
 
-const Profile = () => {
+const storeTypes = [
+  { label: 'type1', value: 'type1' },
+  { label: 'type2', value: 'type2' },
+  { label: 'type3', value: 'type3' },
+];
+
+const Profile = ({ handleSubmit: reduxFormSubmit }) => {
   const styles = useStyles();
 
   const avatar = useSelector(formSelector('avatar'));
+
+  const handleSubmit = async (values) => {
+    const errors = validateForm(values);
+
+    if (!isEmpty(errors)) {
+      throw new SubmissionError(errors);
+    }
+  };
 
   const renderAvatar = () => {
     if (!avatar) return <AvatarDefaultIcon />;
@@ -65,9 +83,10 @@ const Profile = () => {
               classes={{ root: styles.inputRightMargin }} />
             <Field
               name="storeType"
-              component={TextField}
+              component={Select}
+              items={storeTypes}
               label="Store Type"
-              classes={{ root: styles.inputLeftMargin }} />
+              classes={{ formWrapper: styles.inputLeftMargin }} />
           </div>
           <div className={styles.fullSizeRow}>
             <Field
@@ -87,7 +106,8 @@ const Profile = () => {
             <Button
               variant="contained"
               color="primary"
-              classes={{ root: clsx(styles.buttonRoot, styles.buttonSave) }}>
+              classes={{ root: clsx(styles.buttonRoot, styles.buttonSave) }}
+              onClick={reduxFormSubmit(handleSubmit)}>
               Save Changes
             </Button>
           </div>
@@ -95,6 +115,10 @@ const Profile = () => {
       </Grid>
     </div>
   );
+};
+
+Profile.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 const enhance = reduxForm({

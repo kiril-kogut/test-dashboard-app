@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import List from '@material-ui/core/List';
 import ListItem from './ListItem';
 import useStyles from './styles';
@@ -9,6 +10,7 @@ import { ReactComponent as CalendarIcon } from '../../../assets/svg/icon_calenda
 
 const Sidebar = () => {
   const styles = useStyles();
+  const history = useHistory();
 
   return (
     <div className={styles.container}>
@@ -16,11 +18,11 @@ const Sidebar = () => {
         <span className={styles.cartText}>CART</span>
         <span className={styles.orderText}>&ORDER</span>
       </div>
-      <List component="nav">
-        <ListItem icon={<BarsIcon />} title="Inbox" />
-        <ListItem icon={<ProductIcon />} title="Inventory" />
-        <ListItem icon={<OrderIcon />} title="Open Order" />
-        <ListItem icon={<CalendarIcon />} title="Order History" />
+      <List component="nav" classes={{ root: styles.listRoot }}>
+        <ListItem icon={<BarsIcon />} title="Dashboard" onClick={() => history.push('/dashboard')} />
+        <ListItem icon={<ProductIcon />} title="Inventory" onClick={() => history.push('/inventory')} />
+        <ListItem icon={<OrderIcon />} title="Open Order" onClick={() => history.push('/order')} />
+        <ListItem icon={<CalendarIcon />} title="Order History" onClick={() => history.push('/history')} />
       </List>
     </div>
   );

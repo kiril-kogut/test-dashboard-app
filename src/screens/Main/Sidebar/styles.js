@@ -1,14 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   container: {
     height: '100%',
     overflowY: 'auto',
-    backgroundColor: '#32495e',
+    backgroundColor: theme.sideBar.background,
+  },
+  listRoot: {
+    paddingTop: '12px',
+    paddingBottom: '12px',
   },
   header: {
     height: '70px',
-    backgroundColor: '#5fa01b',
+    backgroundColor: theme.sideBar.headerColor,
     paddingLeft: '25px',
     display: 'flex',
     alignItems: 'center',
@@ -18,15 +22,15 @@ const styles = makeStyles({
     fontSize: '22px',
     textTransform: 'uppercase',
     fontWeight: 700,
-    fontFamily: 'Poppins',
+    fontFamily: theme.fontFamily,
   },
   orderText: {
-    color: 'white',
+    color: theme.sideBar.headerTitleColor,
     fontSize: '22px',
     textTransform: 'uppercase',
     fontWeight: 300,
-    fontFamily: 'Poppins',
+    fontFamily: theme.fontFamily,
   },
-});
+}));
 
 export default styles;

@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   container: {
     width: '100%',
     height: '100%',
@@ -18,9 +18,9 @@ const styles = makeStyles({
     flexDirection: 'column',
   },
   content: {
-    backgroundColor: '#edf1f4',
+    backgroundColor: theme.main.background,
     flex: 1,
   },
-});
+}));
 
 export default styles;

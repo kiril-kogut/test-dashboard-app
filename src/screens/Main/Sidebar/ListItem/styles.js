@@ -1,9 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   root: {
-    paddingTop: '16px',
-    paddingBottom: '16px',
+    paddingTop: '25px',
+    paddingBottom: '25px',
   },
   iconRoot: {
     minWidth: 'auto',
@@ -16,10 +16,10 @@ const styles = makeStyles({
     paddingLeft: '25px',
   },
   text: {
-    color: '#768c9a',
+    color: theme.sideBar.itemColor,
     fontSize: '14px',
-    fontFamily: 'Poppins'
+    fontFamily: theme.fontFamily,
   },
-});
+}));
 
 export default styles;

@@ -10,7 +10,7 @@ const Picker = ({ input: { value, meta, ...restInput}, classes, format, ...restP
 
   return (
     <DatePicker
-      classes={{ root: clsx(styles.input, classes.root) }}
+      className={clsx(styles.input, classes.root)}
       value={value ? moment(value, format) : null}
       format={format}
       {...restInput}

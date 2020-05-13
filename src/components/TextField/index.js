@@ -7,7 +7,14 @@ import useStyles from './styles';
 const TextInput = ({ input, meta, classes, ...restProps }) => {
   const styles = useStyles();
 
-  return <TextField {...input} classes={{ root: clsx(styles.input, classes.root) }} {...restProps} />;
+  return (
+    <TextField
+      error={meta.error}
+      helperText={meta.error}
+      {...input}
+      classes={{ root: clsx(styles.input, classes.root) }}
+      {...restProps} />
+  );
 };
 
 TextInput.propTypes = {
