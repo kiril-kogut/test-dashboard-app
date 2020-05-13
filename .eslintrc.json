@@ -1,0 +1,26 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prop-types": 0,
+    "no-underscore-dangle": 0,
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error",
+    "import/prefer-default-export": 0,
+    "semi": [2, "always"],
+    "react/jsx-props-no-spreading": 0
+  },
+  "globals": {
+    "FileReader": true,
+    "document": true,
+    "test": true,
+    "expect": true
+  },
+  "parser": "babel-eslint"
+}
