@@ -63,12 +63,10 @@ const styles = makeStyles((theme) => ({
     width: '400px',
     maxWidth: '100%',
     marginBottom: '20px',
+    justifyContent: 'space-between',
   },
-  inputRightMargin: {
-    marginRight: '10px',
-  },
-  inputLeftMargin: {
-    marginLeft: '10px',
+  halfInput: {
+    width: '190px!important',
   },
   uploadInput: {
     display: 'none',

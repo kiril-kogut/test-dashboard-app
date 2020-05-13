@@ -2,8 +2,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const styles = makeStyles((theme) => ({
   input: {
-    display: 'flex',
     width: '100%',
+
+    '& .MuiInputBase-root': {
+      height: '32px',
+      width: '100%',
+    },
 
     '& input, .MuiFormLabel-root': {
       color: theme.input.color,

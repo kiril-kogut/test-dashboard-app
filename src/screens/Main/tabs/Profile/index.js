@@ -1,5 +1,5 @@
 import React  from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import isEmpty from 'ramda/src/isEmpty';
@@ -12,6 +12,7 @@ import TextField from '../../../../components/TextField';
 import UploadButton from '../../../../components/UploadButton';
 import DatePicker from '../../../../components/DatePicker';
 import Select from '../../../../components/Select';
+import { updateProfile } from '../../../../redux/reducers/profile';
 import { ReactComponent as AvatarDefaultIcon } from '../../../../assets/svg/icon_avatar_default.svg';
 
 const formName = 'profile';
@@ -25,6 +26,7 @@ const storeTypes = [
 
 const Profile = ({ handleSubmit: reduxFormSubmit }) => {
   const styles = useStyles();
+  const dispatch = useDispatch();
 
   const avatar = useSelector(formSelector('avatar'));
 
@@ -34,6 +36,8 @@ const Profile = ({ handleSubmit: reduxFormSubmit }) => {
     if (!isEmpty(errors)) {
       throw new SubmissionError(errors);
     }
+
+    dispatch(updateProfile(values));
   };
 
   const renderAvatar = () => {
@@ -70,7 +74,7 @@ const Profile = ({ handleSubmit: reduxFormSubmit }) => {
             <Field name="email" component={TextField} label="Email" />
           </div>
           <div className={styles.fullSizeRow}>
-            <Field name="phoneNumber" label="Phone Number" component={TextField} />
+            <Field name="phoneNumber" label="Phone Number" component={TextField} type="phoneNumber" />
           </div>
           <div className={styles.fullSizeRow}>
             <Field name="fullAddress" label="Full Address" component={TextField} />
@@ -80,13 +84,13 @@ const Profile = ({ handleSubmit: reduxFormSubmit }) => {
               name="storeName"
               component={TextField}
               label="Store Name"
-              classes={{ root: styles.inputRightMargin }} />
+              classes={{ root: styles.halfInput }} />
             <Field
               name="storeType"
               component={Select}
               items={storeTypes}
               label="Store Type"
-              classes={{ formWrapper: styles.inputLeftMargin }} />
+              classes={{ formWrapper: styles.halfInput }} />
           </div>
           <div className={styles.fullSizeRow}>
             <Field
@@ -94,13 +98,13 @@ const Profile = ({ handleSubmit: reduxFormSubmit }) => {
               component={DatePicker}
               label="Opening Time"
               animateYearScrolling
-              classes={{ root: styles.inputRightMargin }} />
+              classes={{ root: styles.halfInput }} />
             <Field
               name="closingTime"
               component={DatePicker}
               label="Closing Time"
               animateYearScrolling
-              classes={{ root: styles.inputLeftMargin }} />
+              classes={{ root: styles.halfInput }} />
           </div>
           <div className={styles.formBottom}>
             <Button

@@ -11,10 +11,9 @@ const validateEmail = (value) => (errors) => {
 };
 
 const validatePhoneNumber = (value) => (errors) => {
-  console.log('phone', value);
   if (!value) return { ...errors, phoneNumber: 'Required' };
 
-  const reg = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  const reg = /^\+?[0-9]+$/;
 
   if (reg.test(value)) return errors;
 

@@ -20,7 +20,7 @@ const Dropdown = ({ title, children }) => {
   return (
     <div>
       <Button
-        endIcon={<KeyboardArrowDownIcon color="primary" classes={{ colorPrimary: styles.icon }}  />}
+        endIcon={<KeyboardArrowDownIcon color="primary" classes={{ colorPrimary: styles.icon, root: styles.root }}  />}
         classes={{ text: styles.text }}
         onClick={handleClick}>
         {title}
@@ -41,6 +41,7 @@ Dropdown.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
+    PropTypes.string
   ]),
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -13,6 +14,9 @@ const Header = () => {
   const styles = useStyles();
   const history = useHistory();
 
+  const avatar = useSelector((state) => state.profile.avatar);
+  const fullName = useSelector((state) => state.profile.fullName);
+
   return (
     <div className={styles.container}>
       <div className={styles.contentContainer}>
@@ -26,14 +30,14 @@ const Header = () => {
           </Badge>
         </IconButton>
         <Divider orientation="vertical" classes={{ root: styles.divider }} />
-        <Dropdown title="John Doe">
+        <Dropdown title={fullName}>
           <MenuItem onClick={() => history.push('/profile')}>Profile</MenuItem>
           <MenuItem>My account</MenuItem>
           <MenuItem>Logout</MenuItem>
         </Dropdown>
         <Avatar
-          alt="John Doe"
-          src="https://greendestinations.org/wp-content/uploads/2019/05/avatar-exemple-300x277.jpg"
+          alt={fullName}
+          src={avatar}
           className={styles.avatar} />
       </div>
     </div>
