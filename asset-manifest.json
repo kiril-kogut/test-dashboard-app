@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/test-dashboard-app/static/css/main.b201a0ad.chunk.css",
+    "main.js": "/test-dashboard-app/static/js/main.de0a398b.chunk.js",
+    "main.js.map": "/test-dashboard-app/static/js/main.de0a398b.chunk.js.map",
+    "runtime-main.js": "/test-dashboard-app/static/js/runtime-main.24d9cc16.js",
+    "runtime-main.js.map": "/test-dashboard-app/static/js/runtime-main.24d9cc16.js.map",
+    "static/js/2.9435cf52.chunk.js": "/test-dashboard-app/static/js/2.9435cf52.chunk.js",
+    "static/js/2.9435cf52.chunk.js.map": "/test-dashboard-app/static/js/2.9435cf52.chunk.js.map",
+    "index.html": "/test-dashboard-app/index.html",
+    "precache-manifest.67ae3e6bbfdba4640c38b277bf45886b.js": "/test-dashboard-app/precache-manifest.67ae3e6bbfdba4640c38b277bf45886b.js",
+    "service-worker.js": "/test-dashboard-app/service-worker.js",
+    "static/css/main.b201a0ad.chunk.css.map": "/test-dashboard-app/static/css/main.b201a0ad.chunk.css.map",
+    "static/js/2.9435cf52.chunk.js.LICENSE.txt": "/test-dashboard-app/static/js/2.9435cf52.chunk.js.LICENSE.txt",
+    "static/media/icon_avatar_default.969001b7.svg": "/test-dashboard-app/static/media/icon_avatar_default.969001b7.svg",
+    "static/media/icon_calendar.4dae59c9.svg": "/test-dashboard-app/static/media/icon_calendar.4dae59c9.svg",
+    "static/media/icon_dashboard.06a24e19.svg": "/test-dashboard-app/static/media/icon_dashboard.06a24e19.svg",
+    "static/media/icon_order.02e5bfa1.svg": "/test-dashboard-app/static/media/icon_order.02e5bfa1.svg",
+    "static/media/icon_products.77a5434f.svg": "/test-dashboard-app/static/media/icon_products.77a5434f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24d9cc16.js",
+    "static/js/2.9435cf52.chunk.js",
+    "static/css/main.b201a0ad.chunk.css",
+    "static/js/main.de0a398b.chunk.js"
+  ]
+}
